@@ -1,0 +1,1 @@
+<!-- ToDo: Reach out to X people and ask them for tutorial on how to generate a simple image from prompts & best practices with the resources & what is needed for that. -->

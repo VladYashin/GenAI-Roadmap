@@ -1,0 +1,1 @@
+<!-- ToDo: Reach out to AI&Design and ask him for tutorial on how to generate a simple AI video with the resources & what is needed for that. -->
