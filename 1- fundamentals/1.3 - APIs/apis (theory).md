@@ -65,6 +65,7 @@ The response from the server is plain data, without the typical graphical render
 
 
 ## Learn more
-    - [API Basics on MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-    - [Postman Learning Center](https://learning.postman.com/)
-    - [RapidAPI Blog](https://rapidapi.com/blog/)
+   - [APIs for Begineers](https://www.youtube.com/watch?v=WXsD0ZgxjRw) (Probably the best **video** tutorial on APIs for beginners)
+   - [API Basics on MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) (Great **text** tutorial on APIs from MDN)
+   - [Postman](https://learning.postman.com/) (Send your first API request!)
+   - [RapidAPI Blog](https://rapidapi.com/blog/) (Everything round about APIs in one place)

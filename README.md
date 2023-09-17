@@ -18,7 +18,7 @@ Here's the ultimate GenAI Learning Roadmap!
 ## Table of Contents
 1. [Why You Should Learn AI? Why Now?](#why-you-should-learn-ai-why-now)
 2. [Who Is This Roadmap For?](#who-is-this-roadmap-for)
-3. [Minimal Requirements](#minimal-requirements)
+3. [Preliminaries](#preliminaries)
 4. [Roadmap Topics](#roadmap-topics)
 5. [Benefits](#benefits)
 6. [FAQ](#faq)
