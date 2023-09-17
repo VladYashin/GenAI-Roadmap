@@ -12,4 +12,4 @@
 
 To keep up with the latest research I recommend you to read the scientific papers from the following resources: 
 
-<!-- ToDo: Add resources to follow -->
+<!-- ToDo: Add resources to follow! Find best sources out there. -->
