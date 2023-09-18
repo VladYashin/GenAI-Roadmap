@@ -1,0 +1,39 @@
+Best Practices for Auditing a Model
+When modeling, I encourage you to always bear this single question at the back of your mind: “Am I making this model easily auditable?” because for every task executed, formula created, and link built, there will always be a faster, “dirtier” (in industry parlance) way to do the job. Such hacks and tricks, however clever they may seem at the time, and especially after time intervals, will invariably be forgotten and will lead to hard-to-track-down errors. Keeping a third-person reviewer in mind will guide you through your process and help you come to the right decision at key junctures.
+
+Below are a series of best practices on how to build with an auditor mindset. As follows:
+
+1. One Row, One Formula
+You should have only one formula per row, meaning that whatever formula is used in the first cell of any given row should be the same formula uniformly applied across the entire row. Users should understand the structure of your model by looking at the first cell of each row as they proceed vertically down your model.
+
+While this is simple in principle, it is violated often enough to highlight further. A common instance often takes place when spreadsheets are split between a “historical financials” group of columns and “outer-year forecasts” (see image above entitled, “Example of Well-formatted (Color-coded) Financials Summary,” as a reference).
+
+One easy way to address these instances, is the use of flags (e.g., 1/0, TRUE/FALSE) positioned at the top of the spreadsheet, then referenced using IF statements through the body of one’s model. A simple illustration of this at work is as follows:
+
+Example of 'The Use of Flags' in Excel Modeling
+2. No Hard-coded Numbers Embedded Within Formulas
+Never use hard-coded numbers embedded in formulas because they are very difficult to spot if the user is less familiar with the model. Instead, clearly highlight and separate the inputs/hard-codes from the formulas; better yet, gather all the inputs/hard-codes (as appropriate) and aggregate them in the same tab. Subsequently have your formulas pull/reference them as appropriate from the required cell and from the appropriate tab.
+
+3. Simple Is Always Better
+It is always better to avoid complicated formulas. Instead, break up your formula into easily digestible steps. Instead of one seemingly neat row, this approach will often create many more rows, resulting in a larger spreadsheet; but one that will be much easier to follow and audit by a third party.
+
+4. Adhere Consistently to Your Sign Convention
+You should decide at time-zero what your sign convention/key will be. By way of illustration, ask yourself in the design stage of your model, “Will costs, expenses, deductions, depreciation, CapEx, etc. be presented as negative or positive numbers?” My personal preference is to always present costs as negative numbers for two reasons: (a) The totals will always be straight sums and you will minimize user error, and (b) it will be easier to spot mistakes using just the signs.
+
+5. Avoid Naming Your Cells, Instead Rely on Excel’s Grid Logic
+Where possible I strongly recommend avoiding naming your cells as it becomes difficult to locate the source input for said named cell (e.g., “Inflation”) down the road. Instead, I recommend that you rely on the grid convention of Excel within your formulas (e.g., simply linking to cell C4 or location, [Tab Name]l'!G21, if the reference is in a different tab or workbook).
+
+6. Never Have the Same Input in Multiple Locations
+Organize your inputs simply and transparently. It is my recommendation that you consolidate all inputs in a few driver tabs and reference them from their singular points of origin throughout the spreadsheet.
+
+7. Avoid Linking Files
+Avoid linking to other files. It is better to input the relevant data you require from a different file as hard-coded inputs, which you then manually update as required. Cross-linking has been known to crash larger Excel models or update inconsistently, thereby creating hard-to-track errors.
+
+8. Don’t Hide Sheets or Rows
+Within longer spreadsheet, “group” rows/columns rather than “hide” them.
+
+9. Fewer, Bigger Tabs Are Better Than Multiple Smaller Tabs
+This practice is based 100% on experience. It is easier to follow and audit a continuous array for data across one large, contiguous spreadsheet, than across multiple tabs or, worse, multiple spreadsheets that are cross-linked.
+
+10. Create Checks Throughout Your Model via “Aggregated Error Checks” Located in One Tab
+Checks are the easiest way to quickly review the integrity of a model. “Checks” encompass everything from ensuring that totals that should tie actually do to ensuring that one’s balance sheet actually balances. I usually build a few checks at the top or bottom of each spreadsheet then consolidate them in a separate “Check Tab.” This ensures that it is easy to find an error in the model and then trace where that error originated.
